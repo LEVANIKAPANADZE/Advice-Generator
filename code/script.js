@@ -18,5 +18,8 @@ async function getAdvice() {
     alert(error.message);
   }
 }
+getAdvice();
 
-dice.addEventListener("click", getAdvice);
+dice.addEventListener("click", () => {
+  window.location.reload();
+});
