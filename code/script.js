@@ -1,3 +1,5 @@
+const dice = document.querySelector(".dice");
+
 async function getAdvice() {
   try {
     const response = await fetch("https://api.adviceslip.com/advice");
@@ -16,4 +18,5 @@ async function getAdvice() {
     alert(error.message);
   }
 }
-getAdvice();
+
+dice.addEventListener("click", getAdvice);
